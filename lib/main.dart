@@ -38,11 +38,16 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: InteractiveViewer(
-          maxScale: 15.0,
-          minScale: 0.01,
-          boundaryMargin: const EdgeInsets.all(19),
-          child: Image.asset('assets/muhi.jpg'),
+        child: Column(
+          children: [
+            const Text("Muhi Pic"),
+            InteractiveViewer(
+              maxScale: 15.0,
+              minScale: 0.01,
+              boundaryMargin: const EdgeInsets.all(19),
+              child: Image.asset('assets/muhi.jpg'),
+            ),
+          ],
         ),
       ),
     );
